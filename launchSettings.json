@@ -1,0 +1,14 @@
+{
+  "profiles": {
+    "Docker Compose": {
+      "commandName": "DockerCompose",
+      "composeLaunchAction": "None",
+      "composeLaunchServiceName": "blazor.rest.api",
+      "commandVersion": "1.0",
+      "serviceActions": {
+        "blazor.rest.api": "StartDebugging",
+        "blazor.auth.api": "StartDebugging"
+      }
+    }
+  }
+}

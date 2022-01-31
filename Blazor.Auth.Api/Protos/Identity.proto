@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+option csharp_namespace = "Blazor.Auth.Api";
+
+package IdentityServer;
+
+
+service Identity {
+  
+  rpc Create (UserRequest) returns (void);
+  rpc Login (UserRequest) returns (TokenReply);
+  rpc Refresh(RefreshRequest) returns (TokenReply);
+}
+
+message RefreshRequest {
+	string userId = 1;
+	string refresh = 2;
+}
+
+message UserRequest {
+  string username = 1;
+  string email =2;
+  string password = 3;
+  string role = 4;
+}
+
+message TokenReply {
+  string Token = 1;
+  string RefreshToken = 2;
+}

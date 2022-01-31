@@ -1,0 +1,10 @@
+version: '3.4'
+
+services:
+  blazor.rest.api:
+    image: ${DOCKER_REGISTRY-}blazorrestapi
+    build:
+      context: .
+      dockerfile: Blazor.Rest.Api/Dockerfile
+    ports:
+        - "5000:80"
